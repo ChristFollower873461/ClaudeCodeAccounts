@@ -1,10 +1,13 @@
 # Repository Status
 
 - Status: Public prototype
-- Last reviewed: 2026-04-26
-- Notes: Small Next.js prototype currently named bookbot-app in package metadata. Rename or clarify later if this stays active.
+- Last reviewed: 2026-08-23
+- Notes: Small Next.js prototype with no account-management implementation or
+  repository deployment configuration. Keep maintained and public while product
+  scope is decided.
 
 ## Cleanup Guidance
 
-- Prefer metadata, README, and documentation cleanup before structural changes.
+- Preserve the narrow prototype while keeping dependencies, CI, and public
+  metadata current.
 - Do not delete, archive, rename, or move this repo until the status above is checked against current deployments and client/product needs.

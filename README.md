@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClaudeCodeAccounts
 
-## Getting Started
+This repository currently contains a small, retained Next.js prototype. Despite
+the repository name, the checked-in application does not implement Claude
+account management, authentication, customer data storage, uploads, payments,
+or a public write API.
 
-First, run the development server:
+## Status
+
+- Classification: public prototype, not a production release.
+- The UI remains the Create Next App starter while the intended product scope is
+  decided.
+- No deployment configuration is committed to the repository.
+- Package and security maintenance is active even while the product scope is
+  intentionally narrow.
+
+See [STATUS.md](STATUS.md) for the maintenance decision and [SECURITY.md](SECURITY.md)
+for private vulnerability reporting.
+
+## Local verification
+
+Use Node.js 22.13 or newer.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+npm run lint
+npm run typecheck
+npm run build
+npm test
+npm audit
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The production response configuration removes the framework-identifying header
+and sets CSP, frame, content-type, referrer, opener, and permissions policies.
+HSTS should be added only after a real HTTPS production hostname and rollback
+path have been verified.
